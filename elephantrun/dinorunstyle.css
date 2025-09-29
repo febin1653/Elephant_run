@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    /* CHANGE: Main background is now black */
+    background-color: #000000;
+    /* CHANGE: Use Press Start 2P font for all text */
+    font-family: 'Press Start 2P', monospace;
+    /* Optional: Change default text color to white for visibility against black background */
+    color: white; 
+}
+
+.game-container {
+    width: 600px;
+    height: 200px;
+    border-bottom: 3px solid white; /* Changed border to white for contrast */
+    position: relative;
+    overflow: hidden; 
+    background-color: #000000; /* Game screen background remains light */
+}
+
+#dino {
+    width: 80px;
+    height: 75px;
+    background-color:transparent; 
+    background-image: url('elephant.png');
+    background-size: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+/* CSS for the jump animation */
+.jump-animation {
+    animation: jump 0.6s ease-out;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    40% { bottom: 100px; }
+    70% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+
+/* CSS for the coconut obstacle */
+/* style.css */
+
+/* ... (other styles) ... */
+
+/* CSS for the coconut obstacle */
+.cactus {
+    /* We are keeping the dimensions the same, but you can adjust these */
+    width: 29px; 
+    height: 50px;
+    
+
+    background-color: transparent; /* Ensure no residual background color */
+    background-image: url('coconut.png'); /* <-- CHANGE THIS to your image file/URL */
+    background-size: 100px; /* Scales the image to fit the element */
+    background-repeat: no-repeat;
+    background-position: bottom; /* Aligns the image to the ground */
+    
+    position: absolute;
+    bottom: 0;
+}
+
+/* ... (rest of the styles remain the same) ... */
+
+/* Keyframe animation to move the obstacle from right to left */
+@keyframes move-cactus {
+    from { right: -20px; }
+    to { right: 600px; }
+}
+
+#score {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    /* Ensure score is visible if default color is changed to white */
+    color: white; 
+}
+
+#game-over-screen {
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Keep background light so text is visible */
+    background: rgba(255, 255, 255, 0.9); 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2em;
+    color: black; 
+    z-index: 10;
+}
+
+#game-over-screen button {
+    /* CHANGE: Button is black with white text */
+    background-color: #000000;
+    color: #ffffff;
+    
+    font-family: 'Press Start 2P', monospace; /* Use the retro font */
+    padding: 10px 20px;
+    font-size: 0.6em;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid white; /* Add a white border for contrast */
+}
