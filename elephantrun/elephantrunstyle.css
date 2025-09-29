@@ -59,17 +59,15 @@ body {
     height: 50px;
     
 
-    background-color: transparent; /* Ensure no residual background color */
-    background-image: url('coconut.png'); /* <-- CHANGE THIS to your image file/URL */
-    background-size: 100px; /* Scales the image to fit the element */
+    background-color: transparent; 
+    background-image: url('coconut.png'); 
+    background-size: 100px; 
     background-repeat: no-repeat;
-    background-position: bottom; /* Aligns the image to the ground */
+    background-position: bottom; 
     
     position: absolute;
     bottom: 0;
 }
-
-/* ... (rest of the styles remain the same) ... */
 
 /* Keyframe animation to move the obstacle from right to left */
 @keyframes move-cactus {
@@ -112,4 +110,5 @@ body {
     cursor: pointer;
     margin-top: 20px;
     border: 2px solid white; /* Add a white border for contrast */
+
 }
