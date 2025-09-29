@@ -1,4 +1,4 @@
-const dino = document.getElementById('dino');
+const dino = document.getElementById('dino');// dino==elephant
 const container = document.querySelector('.game-container');
 const scoreDisplay = document.getElementById('score');
 const gameOverScreen = document.getElementById('game-over-screen');
@@ -143,4 +143,5 @@ document.addEventListener('keydown', (event) => {
 });
 
 // Initial call to start the game when the script loads
+
 window.startGame();
